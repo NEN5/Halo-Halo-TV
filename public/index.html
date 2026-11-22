@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070d1c">
+<title>Lumen</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="shell" id="shell"><div id="view"></div></div>
+<nav class="nav" id="nav" aria-label="Main"><ul>
+  <li><a href="#/" data-k="">__I_film__<span>Movies</span></a></li>
+  <li><a href="#/shorts" data-k="shorts">__I_shorts__<span>Shorts</span></a></li>
+  <li><a href="#/discover" data-k="discover">__I_compass__<span>Discover</span></a></li>
+  <li><a href="#/list" data-k="list">__I_list__<span>My List</span></a></li>
+  <li><a href="#/me" data-k="me">__I_user__<span>Me</span></a></li>
+</ul></nav>
+
+
+<!-- Order matters: each file uses what the ones above it define. -->
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/views.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
