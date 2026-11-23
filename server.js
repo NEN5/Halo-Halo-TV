@@ -114,6 +114,12 @@ async function proxy(res, kind, id, rest, search) {
   try {
     const r = await fetch(target, { headers, signal: ac.signal });
     const body = Buffer.from(await r.arrayBuffer());
+    if (!r.ok) {
+      const shown = new URL(target);
+      if (p.queryParam) shown.searchParams.delete(p.queryParam); // never print the key
+      console.warn(`! ${p.label} answered ${r.status} for ${shown.href}`);
+      console.warn(`  body: ${body.toString("utf8").slice(0, 200).replace(/\s+/g, " ")}`);
+    }
     res.writeHead(r.status, {
       "Content-Type": r.headers.get("content-type") || "application/json",
       "Cache-Control": "no-store"

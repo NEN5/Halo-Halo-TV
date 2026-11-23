@@ -34,7 +34,7 @@ function poster(t,{tag=true,upd=true}={}){
   const img=t.poster?`<img loading="lazy" alt="" src="${esc(t.poster)}" onerror="this.remove()">`:"";
   return `<div class="poster" style="${artStyle(t)}"><div class="ptitle"><b>${esc(t.title)}</b></div>${img}
     ${tag&&t.badge?`<span class="tag">${esc(t.badge)}</span>`:""}
-    ${t.corner?`<span class="corner ${esc(t.corner.toLowerCase())}">${esc(t.corner)}</span>`:""}
+    ${t.corner?`<span class="corner ${esc(String(t.corner).toLowerCase())}">${esc(String(t.corner))}</span>`:""}
     ${upd&&t.type==="Series"&&!t.short?`<span class="upd">Update to ${t.latest}</span>`:""}</div>`;
 }
 function card(t){

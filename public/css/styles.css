@@ -186,7 +186,8 @@ svg{display:block}
 .plats::-webkit-scrollbar{display:none}
 .plat{display:flex;align-items:center;gap:10px;padding:9px 16px 9px 9px;border-radius:12px;background:#262629;font-size:17px;white-space:nowrap;flex:none}
 .plat[aria-pressed=true]{background:linear-gradient(90deg,#8a4cf0,#4f8cff)}
-.plat i{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font:700 17px var(--display);font-style:normal;color:#fff;background:hsl(var(--ph) 65% 46%)}
+.plat i{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font:700 17px var(--display);font-style:normal;color:#fff;background:hsl(var(--ph) 65% 46%);position:relative;overflow:hidden}
+.plat i img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .rank{display:flex;gap:16px;padding:8px 0 14px;align-items:flex-start}
 .rank .pw{position:relative;width:34%;max-width:200px;flex:none}
 .rank .pw .poster{aspect-ratio:3/4;border-radius:12px}
